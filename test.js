@@ -1,5 +1,9 @@
 const isMe = require('./index');
-const assert = require('assert');
+const test = require('tape');
 
-assert(isMe('me') === true, 'is me');
-assert(isMe('you') === false, 'is not me');
+test('is me', function (t) {
+    // t.plan(1);
+
+    t.equal(isMe('me'), true);
+    t.end();
+});
